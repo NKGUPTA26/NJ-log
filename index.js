@@ -4,6 +4,7 @@ const bp = require('body-parser');
 const path = require('path');
 const mysql = require('mysql');
 const notifier = require('node-notifier');
+var PORT = 8000;
 
 var client = mysql.createConnection({
     host : 'us-cdbr-iron-east-05.cleardb.net',
@@ -160,6 +161,6 @@ app.post('/allot_courses', (req, res) => {
     });
 });
 
-app.listen(8000,()=>{
-    console.log(`Listening on port : 8000`);
+app.listen(PORT,()=>{
+    console.log(`Listening on port : ${PORT}`);
 });
