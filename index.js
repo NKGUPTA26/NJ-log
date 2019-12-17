@@ -78,8 +78,8 @@ app.post('/show_courses', (req, res) => {
 
 // Register user
 app.post("/register", (req, res) => {
-    var qr = `INSERT INTO users(name,user,contact,email,pwd) VALUES(?,?,?,?,?)`;
-    tmp = [req.body.name,req.user, req.body.contact, req.body.email, req.body.pwd];
+    var qr = `INSERT INTO users(name,contact,email,pwd) VALUES(?,?,?,?)`;
+    tmp = [req.body.name, req.body.mobile, req.body.email, req.body.pwd];
     client.connect((err) => {
         if(err)
         {
