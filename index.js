@@ -10,9 +10,9 @@ console.log(`PORT PORT ---> ${PORT}`)
 
 var client = mysql.createConnection({
     host : 'us-cdbr-iron-east-05.cleardb.net',
-    user : 'b13db25aed92fd',
-    password : '56505be9',
-    database : 'projectDb'
+    user : 'b6d7fcd761f50b',
+    password : 'd6c07695',
+    database : 'heroku_ae071a8b7630408'
 });
 
 const app = express();
