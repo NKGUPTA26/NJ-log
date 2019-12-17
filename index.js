@@ -92,7 +92,7 @@ app.post("/register", (req, res) => {
                 console.log(error);
                 return;
             }
-            console.log("user entered...");
+            console.log("user entered...",result);
         });
     });
     res.sendFile(path.join(__dirname+'/public/index.html'));
