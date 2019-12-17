@@ -4,7 +4,9 @@ const bp = require('body-parser');
 const path = require('path');
 const mysql = require('mysql');
 const notifier = require('node-notifier');
-var PORT = 8000;
+const PORT = process.env.PORT || 8000;
+
+console.log(`PORT PORT ---> ${PORT}`)
 
 var client = mysql.createConnection({
     host : 'us-cdbr-iron-east-05.cleardb.net',
