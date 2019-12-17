@@ -78,7 +78,7 @@ app.post('/show_courses', (req, res) => {
 
 // Register user
 app.post("/register", (req, res) => {
-    var qr = "insert into users(name,user,contact,email,pwd) values(?,?,?,?,?)";
+    var qr = `INSERT INTO users(name,user,contact,email,pwd) VALUES(?,?,?,?,?)`;
     tmp = [req.body.name,req.user, req.body.contact, req.body.email, req.body.pwd];
     client.connect((err) => {
         if(err)
@@ -86,7 +86,7 @@ app.post("/register", (req, res) => {
             console.log(err);
             return
         }
-        client.query(qr, [tmp], (error, result) => {
+        client.query(qr, tmp, (error, result) => {
             if(error)
             {
                 console.log(error);
