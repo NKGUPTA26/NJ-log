@@ -63,7 +63,7 @@ app.post('/show_courses', (req, res) => {
                         res.write(result[i].cname);
                     res.write("</td>");
                     res.write("<td>");
-                        res.write("<a href='http://localhost:8000/subscribe?cid="+result[i].cid+"'>Subscribe</a>");
+                        res.write("<a href='/subscribe?cid="+result[i].cid+"'>Subscribe</a>");
                     res.write("</td>");
                 res.write("</tr>");
             }
